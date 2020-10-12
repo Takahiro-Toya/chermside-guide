@@ -1,13 +1,16 @@
-/* h1 */
+/* h1 (Only site title) */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 /* nav menu */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 /* p */
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
 /* Memo
     Yellow: #f5dd42
     black: #282c34
+    gray: #616161
 */
 
 /*Global config*/
@@ -18,9 +21,17 @@
 
 p,
 a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 2em;
     text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bree Serif', serif;
 }
 
 
@@ -54,9 +65,24 @@ section:not(:nth-child(1)) {
 }
 
 .breadcrumb li:not([aria-current])::after {
+    border-bottom: none;
     content: ">";
     margin: .25em;
     text-align: center;
+}
+
+.breadcrumb li a {
+    text-underline-position: below;
+    text-decoration: underline;
+    text-decoration-color: #282c34;
+}
+
+.breadcrumb li:([aria-current]):: after {
+    content: ">"
+}
+
+.breadcrumb a {
+    color: #616161;
 }
 
 .padding-all:not(:nth-child(1)) {
@@ -126,7 +152,7 @@ header nav ul {
 header nav ul li {
     flex-grow: 1;
     text-align: center;
-    padding: 15px
+    padding: 15px;
 }
 
 header nav ul li:hover {
@@ -141,8 +167,12 @@ header nav ul li:hover {
     padding: 10px;
     background-color: #ffffee;
     color: #282c34;
-    box-shadow: 2px 2px #cccccc;
+    box-shadow: 4px 4px black;
     font-size: 15px;
+    border: 1px solid black;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
 header nav ul li:hover .tooltip {
@@ -162,29 +192,44 @@ header nav a {
 /* Footer configuration */
 footer {
     flex-grow: 1;
-    justify-content: flex-start
+    justify-content: flex-start;
+    margin-top: 60px;
 }
 
+footer * {
+    color: #616161;
+}
+
+footer h4 {
+    font-size: 1.2em;
+    color: #282c34;
+}
 
 #footer_link_collection {
+    padding: 20px 0px 20px 0px;
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    border-bottom: 3px solid #f5dd42;
 }
 
 #footer_link_collection div {
     justify-content: flex-start;
 }
 
+
 #footer-bottom {
     display: flex;
     flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin: 0px;
+    color: #282c34;
 }
 
 #footer-bottom * {
-    flex-grow: 1;
     text-align: center;
 }
-
 
 
 /* main contents :: index page*/
@@ -192,6 +237,13 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#home-description > section {
+    border: 2px solid #282c34;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 6px 6px #282c34;
 }
 
 #home-description img {
@@ -211,6 +263,10 @@ footer {
     box-shadow: 3px 3px #282c34;
     text-decoration: none;
     color: #282c34;
+}
+
+#home-link-collection h3 {
+    font-size: 1.5em
 }
 
 #home-link-collection a:hover {

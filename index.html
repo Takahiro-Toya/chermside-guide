@@ -22,7 +22,7 @@
         <nav>
             <ul>
                 <li class="active">
-                    <a href="index.html" aria-current="true">
+                    <a href="index.html">
                         Home
                     </a>
                     <div class="tooltip">
@@ -67,7 +67,7 @@
     <main>
         <div class="breadcrumb">
             <ol>
-                <li>
+                <li aria-current="page">
                     <a href="index.html">
                         Home
                     </a>
@@ -81,8 +81,7 @@
                     <!-- description -->
                     <h2 class="has-child">About Chermside</h2>
                     <p>
-                        North of Brisbane, Chermside is one of the most fun places to visit in Australia.<br />
-                        Only 20 minutes from CBD, frequent transports, and the biggest Westfield in Australia.<br />
+                        North of Brisbane, Chermside is one of the most fun places to visit in Australia. Only 20 minutes from CBD, frequent transports, and the biggest Westfield in Australia.<br />
                         This guide is telling you about things to do at Chermside, mainly for those who are retired and want to spend some time with friends !
                     </p>
                 </section>
@@ -93,11 +92,11 @@
             <section id="home-link-collection" class="flex-row">
                 <a class="flex-column flex-item-equal-size" href="eat.html">
                     <h3 class="has-child">Eat</h3>
-                    <p>There are many cafes and restaurants around Chermside. Good to have a lunch/dinner party with your friends</p>
+                    <p>There are many cafes and restaurants around Chermside. Good to have a lunch or dinner party with your friends!</p>
                 </a>
                 <a class="flex-column flex-item-equal-size" href="fun.html">
                     <h3 class="has-child">Fun</h3>
-                    <p>Have fun with your friends at places like Chermside Bowls Club and Kedron Wavell Services Club</p>
+                    <p>Have fun with your friends at Chermside Bowls Club and Kedron Wavell Services Club</p>
                 </a>
                 <a class="flex-column flex-item-equal-size" href="shop.html">
                     <h3 class="has-child">Shop</h3>
@@ -111,41 +110,43 @@
         </article>
     </main>
 
-    <footer class="padding-all">
-        <section id="footer_link_collection" class="flex-row">
+    <footer>
+        <section id="footer_link_collection" class="flex-row padding-all">
             <div class="flex-column flex-item-equa-size">
                 <h4 class="has-child">Categories</h4>
                 <ul>
-                    <li>Home</li>
-                    <li>Eat</li>
-                    <li>Fun</li>
-                    <li>Shop</li>
-                    <li>Relax</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="eat.html">Eat</a></li>
+                    <li><a href="fun.html">Fun</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="relax.html">Relax</a></li>
                 </ul>
             </div>
             <div class="flex-column flex-item-equa-size">
-                <a>
-                    <h4 class="has-child">Reference</h4>
-                </a>
+                <h4 class="has-child">Reference</h4>
+                <ul>
+                    <li><a href="">Images</a></li>
+                    <li><a href="">Fonts</a></li>
+                </ul>
             </div>
             <div class="flex-column flex-item-equa-size">
                 <h4 class="has-child">Subscription</h4>
                 <ul>
-                    <li>Subscribe</li>
-                    <li>Login</li>
+                    <li><a href="">Subscribe</a></li>
+                    <li><a href="">Login</a></li>
                 </ul>
 
             </div>
             <div class="flex-column flex-item-equa-size">
                 <h4 class="has-child">About</h4>
                 <ul>
-                    <li>This website</li>
-                    <li>Editors</li>
-                    <li>Privacy Policy</li>
+                    <li><a href="">About this website</a></li>
+                    <li><a href="">Editors</a></li>
+                    <li><a href="">Privacy Policy</a></li>
                 </ul>
             </div>
         </section>
-        <section id="footer-bottom">
+        <section id="footer-bottom" class="flex-column">
             <p>© Takahiro Toya 2020</p>
             <p>DXB111 A2</p>
         </section>
