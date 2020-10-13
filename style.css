@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: red;
+}
+
 h2,
 h3,
 h4,
@@ -79,10 +83,6 @@ section:not(:nth-child(1)) {
 
 .breadcrumb li:([aria-current]):: after {
     content: ">"
-}
-
-.breadcrumb a {
-    color: #616161;
 }
 
 .padding-all:not(:nth-child(1)) {
@@ -200,6 +200,10 @@ footer * {
     color: #616161;
 }
 
+footer a:hover {
+    color: red;
+}
+
 footer h4 {
     font-size: 1.2em;
     color: #282c34;
@@ -213,14 +217,12 @@ footer h4 {
     border-bottom: 3px solid #f5dd42;
 }
 
-#footer_link_collection div {
+#footer_link_collection li {
     justify-content: flex-start;
 }
 
 
 #footer-bottom {
-    display: flex;
-    flex-direction: row;
     padding-top: 20px;
     padding-bottom: 40px;
     margin: 0px;
@@ -236,10 +238,12 @@ footer h4 {
 #home-description {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #home-description > section {
+    max-width: 60%;
     border: 2px solid #282c34;
     padding: 15px;
     border-radius: 10px;
@@ -247,10 +251,14 @@ footer h4 {
 }
 
 #home-description img {
-    margin-left: 150px;
+    margin: 20px;
     width: 250px;
     height: 250px;
     border-radius: 150px;
+}
+
+#home-link-collection {
+    color: #282c34;
 }
 
 #home-link-collection a {
@@ -280,3 +288,58 @@ footer h4 {
     content: "●";
     font-size: 30px
 }
+
+@media screen and (max-width: 375px) {}
+
+@media screen and (max-width: 768px) {
+    #home-description {
+        flex-direction: column;
+        flex-flow: column-reverse;
+        justify-content: center;
+    }
+
+    #home-description img {
+        display: none;
+    }
+
+    nav {
+        visibility: hidden;
+    }
+
+    .subscribe-button {
+        visibility: hidden;
+    }
+
+    .breadcrumb {
+        visibility: hidden;
+    }
+
+    #header title {
+        /*        flex-direction: column;*/
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home-link-collection {
+        /*        flex-direction: column;*/
+    }
+
+    #home-link-collection a {
+        margin: 20px 0px;
+        flex-direction: column;
+    }
+
+    .flex-column {
+        flex-direction: row;
+    }
+
+    .flex-row {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {}

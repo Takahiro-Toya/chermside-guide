@@ -72,8 +72,8 @@
                         Home
                     </a>
                 </li>
-                <li>
-                    <a href="eat.html" aria-current="page">
+                <li aria-current="page">
+                    <a href="eat.html">
                         Fun
                     </a>
                 </li>
@@ -83,20 +83,43 @@
         </article>
     </main>
 
-    <footer class="padding-all">
-        <section class="flex-row">
-            <div class="flex-column flex-item-equa-size">
+    <footer>
+        <ul id="footer_link_collection" class="flex-row padding-all">
+            <li class="flex-column flex-item-equa-size">
                 <h4 class="has-child">Categories</h4>
-            </div>
-            <div class="flex-column flex-item-equa-size">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="eat.html">Eat</a></li>
+                    <li><a href="fun.html">Fun</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="relax.html">Relax</a></li>
+                </ul>
+            </li>
+            <li class="flex-column flex-item-equa-size">
                 <h4 class="has-child">Reference</h4>
-            </div>
-            <div class="flex-column flex-item-equa-size">
-                <h4 class="has-child">About website</h4>
-            </div>
-        </section>
-        <section id="footer-bottom">
-            <p>Privacy Policy</p>
+                <ul>
+                    <li><a href="">Images</a></li>
+                    <li><a href="">Fonts</a></li>
+                </ul>
+            </li>
+            <li class="flex-column flex-item-equa-size">
+                <h4 class="has-child">Subscription</h4>
+                <ul>
+                    <li><a href="">Subscribe</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+
+            </li>
+            <li class="flex-column flex-item-equa-size">
+                <h4 class="has-child">About</h4>
+                <ul>
+                    <li><a href="">About this website</a></li>
+                    <li><a href="">Editors</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+            </li>
+        </ul>
+        <section id="footer-bottom" class="flex-column">
             <p>© Takahiro Toya 2020</p>
             <p>DXB111 A2</p>
         </section>
