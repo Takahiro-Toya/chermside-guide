@@ -11,6 +11,10 @@
     Yellow: #f5dd42
     black: #282c34
     gray: #616161
+
+    Home -> Landing page
+    Category -> category page, link to place page
+    Place -> place page
 */
 
 /*Global config*/
@@ -35,12 +39,13 @@ p {
     text-align: left;
 }
 
+/* default link hover action */
 a:hover {
     color: red;
 }
 
-h2 {
-    font-size: 2em;
+p {
+    /* margin: 5px; */
 }
 
 h2,
@@ -57,9 +62,10 @@ ol {
     list-style: none;
 }
 
-/* space between sections */
-section:not(:nth-child(1)) {
-    margin-top: 80px;
+/* space to device edge*/
+.space-device-edge {
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .has-child {
@@ -227,15 +233,17 @@ footer h4 {
 }
 
 
-/* main contents :: index page*/
-#home-description {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+/* Home -> Landing page */
+#home {
+    background: url("images/park.jpg") center / cover;
 }
 
-#home-description > * {
-    margin: 20px;
+#home h2 {
+    font-size: 2em;;
+}
+
+#home section:not(:nth-child(1)) {
+    margin-top: 80px;
 }
 
 .description-card {
@@ -243,18 +251,9 @@ footer h4 {
     flex: 3;
     border: 2px solid #282c34;
     padding: 15px;
+    margin: 20px 10%;
     border-radius: 10px;
     box-shadow: 6px 6px #282c34;
-}
-
-#home-desciption-img-container {
-    flex: 2;
-    align-items: center;
-}
-
-#home-desciption-img-container img {
-    max-width: 100%;
-    border-radius: 100%;
 }
 
 #home-link-collection {
@@ -354,17 +353,23 @@ footer h4 {
     color: white;
 }
 
-
+.place-main article h2 {
+    font-size: 50px
+}
 
 .place-detail {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    margin-top: 40px;
+    align-items: center;
+    margin-top: 20px;
     padding: 20px;
     color: #282c34;
     border-bottom: 2px solid #f5dd42;
 }
+
+.place-detail-collection li:nth-child(even) .place-detail {
+    flex-direction: row-reverse;
+}
+
 
 .place-detail * {
     padding: 0px 10px;
@@ -374,7 +379,7 @@ footer h4 {
     flex-direction: row-reverse;
 }
 
-.place-detail > div {
+.place-detail > p {
     flex: 4
 }
 
@@ -396,12 +401,6 @@ footer h4 {
 
     .flex1 {
         flex-direction: column;
-    }
-
-    #home-description {
-        flex-direction: column;
-        flex-flow: column-reverse;
-        justify-content: center;
     }
 }
 
@@ -427,14 +426,9 @@ footer h4 {
         margin-top: 40px;
     }
 
-
-
-    #home-desciption-img-container {
-        width: 60%;
-    }
-
     .breadcrumb {
-        display: none;
+        /* display: none; */
+        visibility: hidden;
     }
 
     #header title {
