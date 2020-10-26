@@ -44,10 +44,6 @@ a:hover {
     color: red;
 }
 
-p {
-    /* margin: 5px; */
-}
-
 h2,
 h3,
 h4,
@@ -55,6 +51,10 @@ h5,
 h6 {
     font-family: 'Bree Serif', serif;
     text-align: center;
+}
+
+h2 {
+    font-size: 2em;;
 }
 
 ul,
@@ -66,6 +66,11 @@ ol {
 .space-device-edge {
     padding-right: 40px;
     padding-left: 40px;
+}
+
+/* element always in a same line*/
+.text-no-wrap {
+    white-space: nowrap;
 }
 
 .has-child {
@@ -109,17 +114,30 @@ ol {
 .margin-all:not(:nth-child(1)) {
     margin: 4%;
 }
+/* directrion switched flex box */
+.flex1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+/* directrion switched flex box */
 .flex2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap
 }
 
-.flex1 {
+/* fixed direction flex box */
+.flex-row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+}
+
+/* fiex direction flex box */
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .flex-item-equal-size {
@@ -191,7 +209,7 @@ header nav a {
 footer {
     flex-grow: 1;
     justify-content: flex-start;
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 footer * {
@@ -238,20 +256,12 @@ footer h4 {
     background: url("images/park.jpg") center / cover;
 }
 
-#home h2 {
-    font-size: 2em;;
-}
-
-#home section:not(:nth-child(1)) {
-    margin-top: 80px;
-}
-
 .description-card {
     background-color: white;
     flex: 3;
     border: 2px solid #282c34;
     padding: 15px;
-    margin: 20px 10%;
+    margin: 40px 10% 0px 10%;
     border-radius: 10px;
     box-shadow: 6px 6px #282c34;
 }
@@ -259,128 +269,122 @@ footer h4 {
 #home-link-collection {
     color: #282c34;
     justify-content: space-around;
+    /* margin: 80px 0px; */
+    padding: 80px 0px;
 }
 
 #home-link-collection a {
     flex: 1 0 150px;
     max-width: 200px;
-    padding: 15px;
     margin: 40px 20px;
-    background-color: #f5dd42;
+    background-color: white;
     text-align: center;
     justify-content: flex-start;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 3px 3px #282c34;
     text-decoration: none;
     color: #282c34;
 }
 
+#home-link-collection a p {
+    padding: 10px 15px;
+}
+
 #home-link-collection h3 {
-    font-size: 1.5em
+    font-size: 1.5em;
+    background-color: #f5dd42;
+    color: #282c34;
+    /* margin-top: 15px; */
+    padding: 15px 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 #home-link-collection a:hover {
-    background-color: #282c34;
-    color: #f5dd42;
-    box-shadow: 3px 3px #f5dd42;
+    background-color: #f5dd42;
+    box-shadow: 10px 10px #282c34;
     transform: rotate(7deg);
 }
 
-#home-link-collection a:before {
-    content: "●";
-    font-size: 30px
-}
-
 /* Category page */
-.category-article {
-    flex-wrap: nowrap;
+
+.category, .place {
+    margin-bottom: 80px;
 }
 
-.category-index {
-    display: none;
-    padding-right: 40px;
-    margin-right: 20px;    
+.category article h2 {
+    padding: 30px 0px;
+    text-align: left;
 }
-
-.category-index * {
-    padding-left: 0px;
-    font-family: 'Inter', sans-serif;
-}
-.category-index h4:before {
-    content: "\00a0";
-}
-
-.category-index a:before {
-    content: "\00a0\00a0";
-}
-
-.category-main {
-    flex: 8;
-    margin-top: 0px;;
-    text-align: center;
-}
-
-#category-main-cards-collection {
+/* collection of places */
+.place-cards {
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.place-card-in-category {
-    flex: 1 0 150px;
-    padding: 15px;
-    border-radius: 20px;
-    box-shadow: 5px 5px #282c34;
-    border: 2px solid #f5dd42;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 300px;
-    color: #282c34
+/* each item in places collection */
+.place-card {
+    width: 29%;
 }
 
-.place-card-in-category:hover {
-    background-color: #f5dd42;
-    color: #282c34;
-    transform: scale(1.05);
+.place-card h3 {
+    margin: 40px 0px 10px 0px;
 }
 
-.place-card-in-category img {
+.place-card img {
     max-width: 100%;
-    margin-top: 20px;
+    box-shadow: 5px 5px #282c34;
+    border-radius: 15px;
 }
 
-.place-card p {
-    color: white;
+
+/* Place page */
+
+.place article {
+    padding: 0px;
 }
 
-.place-main article h2 {
-    font-size: 50px
+.place article h2 {
+    font-size: 50px;
+    padding: 30px 0px;
 }
+
+.place article h3 {
+    margin: 20px 0px 0px 0px;
+    font-size: 2em;
+}
+
 
 .place-detail {
     justify-content: flex-start;
     align-items: center;
-    margin-top: 20px;
-    padding: 20px;
+    padding: 30px;
     color: #282c34;
-    border-bottom: 2px solid #f5dd42;
 }
 
-.place-detail-collection li:nth-child(even) .place-detail {
-    flex-direction: row-reverse;
+.place-detail p, .place-detail .place-detail-image-container {
+    margin: 10px;
 }
 
-
-.place-detail * {
-    padding: 0px 10px;
+.place-detail-collection li:nth-child(odd) {
+    background-color: #f5dd42;
 }
 
-.flip {
+.place-detail-collection li:nth-child(even) {
+    background-color: #282c34;
+    color: white
+}
+
+.place-detail-collection li:nth-child(even) p {
+    color: white;
+}
+
+.place-detail-collection li:nth-child(even) .flex1  {
     flex-direction: row-reverse;
 }
 
 .place-detail > p {
-    flex: 4
+    flex: 1
 }
 
 .place-detail .place-detail-image-container {
@@ -389,6 +393,14 @@ footer h4 {
 
 .place-detail img {
     max-width: 100%;
+}
+
+.place-detail-contact .place-detail-image-container {
+    flex: 1
+}
+
+.place-detail-contact .contact-info {
+    flex: 1
 }
 
 @media screen and (max-width: 375px) {
@@ -401,6 +413,14 @@ footer h4 {
 
     .flex1 {
         flex-direction: column;
+    }
+
+    .breadcrumb {
+        visibility: hidden;
+    }
+
+    .place-card {
+        margin: 0px 0px;
     }
 }
 
@@ -426,11 +446,6 @@ footer h4 {
         margin-top: 40px;
     }
 
-    .breadcrumb {
-        /* display: none; */
-        visibility: hidden;
-    }
-
     #header title {
         /*        flex-direction: column;*/
         justify-content: center;
@@ -442,9 +457,16 @@ footer h4 {
         flex-direction: column;
     }
 
-    .category-index {
-        display: none;;
+    .place-card {
+        width: auto;
+        margin: 10px 10px;
     }
+
+    .place-detail-collection .flex1 {
+        flex-direction: column !important;
+    }
+
+
 }
 
 @media screen and (max-width: 1440px) {}
