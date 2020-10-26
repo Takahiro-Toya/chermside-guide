@@ -140,9 +140,7 @@ ol {
     flex-direction: column;
 }
 
-.flex-item-equal-size {
-    flex: 1;
-}
+
 
 /* Header configuration*/
 
@@ -230,7 +228,6 @@ footer h4 {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    border-bottom: 3px solid #f5dd42;
 }
 
 #footer-link-collection li {
@@ -243,11 +240,12 @@ footer h4 {
     padding-top: 20px;
     padding-bottom: 40px;
     margin: 0px;
-    color: #282c34;
+    background-color: #f5dd42;
 }
 
 #footer-bottom * {
     text-align: center;
+    color: #282c34;
 }
 
 
@@ -256,12 +254,16 @@ footer h4 {
     background: url("images/park.jpg") center / cover;
 }
 
+#home article {
+    padding-top: 40px;
+}
+
 .description-card {
     background-color: white;
     flex: 3;
     border: 2px solid #282c34;
     padding: 15px;
-    margin: 40px 10% 0px 10%;
+    margin: 0px 15%;
     border-radius: 10px;
     box-shadow: 6px 6px #282c34;
 }
@@ -281,7 +283,7 @@ footer h4 {
     text-align: center;
     justify-content: flex-start;
     border-radius: 15px;
-    box-shadow: 3px 3px #282c34;
+    box-shadow: 6px 6px #282c34;
     text-decoration: none;
     color: #282c34;
 }
@@ -309,7 +311,7 @@ footer h4 {
 /* Category page */
 
 .category, .place {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .category article h2 {
@@ -329,6 +331,7 @@ footer h4 {
 
 .place-card h3 {
     margin: 40px 0px 10px 0px;
+    font-size: 1.4em;
 }
 
 .place-card img {
@@ -350,7 +353,7 @@ footer h4 {
 }
 
 .place article h3 {
-    margin: 20px 0px 0px 0px;
+    margin: 20px 20px 0px 20px;
     font-size: 2em;
 }
 
@@ -391,9 +394,6 @@ footer h4 {
     flex: 1
 }
 
-.place-detail img {
-    max-width: 100%;
-}
 
 .place-detail-contact .place-detail-image-container {
     flex: 1
@@ -401,6 +401,10 @@ footer h4 {
 
 .place-detail-contact .contact-info {
     flex: 1
+}
+
+.place-detail img, .place-detail-contact {
+    max-width: 100%;
 }
 
 @media screen and (max-width: 375px) {
@@ -425,6 +429,12 @@ footer h4 {
 }
 
 @media screen and (max-width: 768px) {
+
+    .space-device-edge {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     header {
         background-color: #f5dd42;
     }
@@ -442,19 +452,27 @@ footer h4 {
         margin-bottom: 20px;
     }
 
-    #home section:not(:nth-child(1)){
-        margin-top: 40px;
-    }
-
     #header title {
-        /*        flex-direction: column;*/
         justify-content: center;
         align-items: center;
     }
 
-    #home-link-collection a {
-        margin: 20px 20px;
+    #home-link-collection {
+        align-items: center;;
+    }
+
+    #home-link-collection {
         flex-direction: column;
+    }
+
+    #home-link-collection a {
+        margin: 20px 0px;
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .description-card {
+        margin: 0;
     }
 
     .place-card {
