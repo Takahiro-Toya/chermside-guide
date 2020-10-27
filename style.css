@@ -168,7 +168,13 @@ header nav ul {
 header nav ul li {
     flex-grow: 1;
     text-align: center;
+    /* padding: 15px 0px; */
+}
+
+header nav ul li a {
+    display: inline-block;
     padding: 15px 0px;
+    width: 100%;
 }
 
 header nav ul li:hover {
