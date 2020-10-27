@@ -15,7 +15,10 @@
 
 <body>
     <header>
-        <h1>Chermside Guide</h1>
+        <div id="header-top" class="flex-row">
+            <h1>Chermside Guide</h1>
+            <a href="about.html">About website</a>
+        </div>
         <nav>
             <ul>
                 <li class="active">
@@ -64,37 +67,48 @@
         </nav>
     </header>
     <main id="home">
-        <article class="space-device-edge flex-column">
-            <section class="description-card">
-                <h2 class="has-child">About Chermside</h2>
-                <p>
-                    North of Brisbane, Chermside is one of the most fun places to visit in Brisbane. Only 20
-                    minutes from CBD, frequent transports, and the biggest Westfield in Australia.<br />
-                    This guide is telling you about things to do at Chermside, mainly for those who are retired and
-                    want to spend some time with friends !
-                </p>
+        <article class="flex-column">
+            <section class="description">
+                <div class="description-card">
+                    <h2 class="has-child">About Chermside</h2>
+                    <p>
+                        North of Brisbane, Chermside is one of the most fun places to visit in Brisbane. Only 20
+                        minutes from CBD, frequent transports, and the biggest Westfield in Australia.<br />
+                        This guide is telling you about things to do at Chermside, mainly for those who are retired and
+                        want to spend some time with friends !
+                    </p>
+                </div>
             </section>
-                
+
             <!-- link to category pages (cards) -->
-            <section id="home-link-collection" class="flex1">
-                <a class="flex2" href="eat.html">
-                    <h3 class="has-child">Eat</h3>
-                    <p>There are many cafes and restaurants around Chermside. It's the best place to have a lunch or dinner with
-                        your friends!</p>
-                </a>
-                <a class="flex2" href="fun.html">
-                    <h3 class="has-child">Fun</h3>
-                    <p>Have fun with your friends at Chermside Bowls Club and Kedron Wavell Services Club</p>
-                </a>
-                <a class="flex2" href="">
-                    <h3 class="has-child">Shop</h3>
-                    <p>Chermside's biggest Westfield shopping center maybe better than CBD</p>
-                </a>
-                <a class="flex2" href="">
-                    <h3 class="has-child">Relax</h3>
-                    <p>Relaxing in nature or body treatment at a beauty therapy</p>
-                </a>
-            </section>
+            <ul id="home-link-collection" class="flex1 space-device-edge">
+                <li class="flex-column">
+                    <a class="flex-column" href="eat.html">
+                        <h3 class="has-child">Eat</h3>
+                        <p>There are many cafes and restaurants around Chermside. It's the best place to have a lunch or
+                            dinner with
+                            your friends!</p>
+                    </a>
+                </li>
+                <li class="flex-column">
+                    <a class="flex-column" href="fun.html">
+                        <h3 class="has-child">Fun</h3>
+                        <p>Have fun with your friends at Chermside Bowls Club and Kedron Wavell Services Club</p>
+                    </a>
+                </li>
+                <li class="flex-column">
+                    <a class="flex-column" href="">
+                        <h3 class="has-child">Shop</h3>
+                        <p>Chermside's biggest Westfield shopping center maybe better than CBD</p>
+                    </a>
+                </li>
+                <li class="flex-column">
+                    <a class="flex-column" href="">
+                        <h3 class="has-child">Relax</h3>
+                        <p>Relaxing in nature or body treatment at a beauty therapy</p>
+                    </a>
+                </li>
+            </ul>
         </article>
     </main>
 

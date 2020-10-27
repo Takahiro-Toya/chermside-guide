@@ -11,6 +11,7 @@
     Yellow: #f5dd42
     black: #282c34
     gray: #616161
+    light-gray: #d4d4d4
 
     Home -> Landing page
     Category -> category page, link to place page
@@ -21,6 +22,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    /* overflow: hidden; */
 }
 
 p,
@@ -118,14 +120,12 @@ ol {
 .flex1 {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 /* directrion switched flex box */
 .flex2 {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap
 }
 
 /* fixed direction flex box */
@@ -149,6 +149,11 @@ header h1 {
     padding: 20px;
 }
 
+#header-top {
+    justify-content: space-between;
+    align-items: center;
+}
+
 header nav {
     background-color: #f5dd42;
     align-items: center;
@@ -158,9 +163,6 @@ header nav {
 header nav ul {
     display: flex;
     justify-content: flex-start;
-    flex-grow: 1;
-    padding: 0px;
-    margin: 0px;
 }
 
 header nav ul li {
@@ -201,6 +203,13 @@ header nav a {
     text-decoration: none;
     margin: 0px;
     color: #282c34;
+}
+
+
+
+#header-top a {
+    align-items: center;
+    padding: 20px;
 }
 
 /* Footer configuration */
@@ -249,36 +258,50 @@ footer h4 {
 }
 
 
-/* Home -> Landing page */
-#home {
-    background: url("images/park.jpg") center / cover;
-}
+/* #Home -> Landing page */
 
-#home article {
-    padding-top: 40px;
+#home .description {
+    background: url("images/park.jpg") center / cover;
+    padding: 5% 15% 30% 15%;
 }
 
 .description-card {
     background-color: white;
-    flex: 3;
     border: 2px solid #282c34;
     padding: 15px;
-    margin: 0px 15%;
     border-radius: 10px;
     box-shadow: 6px 6px #282c34;
 }
 
 #home-link-collection {
     color: #282c34;
-    justify-content: space-around;
-    /* margin: 80px 0px; */
-    padding: 80px 0px;
+    justify-content: flex-start;
+    margin: 80px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    /* flex-direction: row; */
 }
+
+#home-link-collection li {
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+#home-link-collection li:first-child {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+#home-link-collection li:last-child {
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
 
 #home-link-collection a {
     flex: 1 0 150px;
-    max-width: 200px;
-    margin: 40px 20px;
     background-color: white;
     text-align: center;
     justify-content: flex-start;
@@ -296,20 +319,26 @@ footer h4 {
     font-size: 1.5em;
     background-color: #f5dd42;
     color: #282c34;
-    /* margin-top: 15px; */
     padding: 15px 0px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    border: 3px solid #f5dd42;
 }
 
 #home-link-collection a:hover {
-    background-color: #f5dd42;
-    box-shadow: 10px 10px #282c34;
-    transform: rotate(7deg);
+    background-color: #282c34;
+    color: white;
+    box-shadow: 10px 10px #f5dd42;
+    transform: rotate(5deg);
+}
+
+#home-link-collection a:hover h3 {
+    background: #282c34;
+    color: white;
+    border-color: #282c34;
 }
 
 /* Category page */
-
 .category, .place {
     margin-bottom: 60px;
 }
@@ -350,6 +379,8 @@ footer h4 {
 .place article h2 {
     font-size: 50px;
     padding: 30px 0px;
+    color: #282c34;
+    text-shadow: 0px 3px #f5dd42;
 }
 
 .place article h3 {
@@ -370,21 +401,22 @@ footer h4 {
 }
 
 .place-detail-collection li:nth-child(odd) {
-    background-color: #f5dd42;
+    background-color: white;
 }
 
 .place-detail-collection li:nth-child(even) {
-    background-color: #282c34;
-    color: white
+    background-color: #f5dd42;
+    color: #282c34
 }
 
 .place-detail-collection li:nth-child(even) p {
-    color: white;
+    color: #282c34;
 }
 
 .place-detail-collection li:nth-child(even) .flex1  {
     flex-direction: row-reverse;
 }
+
 
 .place-detail > p {
     flex: 1
@@ -394,18 +426,67 @@ footer h4 {
     flex: 1
 }
 
-
-.place-detail-contact .place-detail-image-container {
-    flex: 1
-}
-
-.place-detail-contact .contact-info {
-    flex: 1
-}
-
-.place-detail img, .place-detail-contact {
+.place-detail img {
     max-width: 100%;
 }
+
+#place-contact-info {
+    background: #d4d4d4;
+}
+
+/* About page */
+
+#about {
+    margin: 30px 0px;
+}
+
+#about h2 {
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+#about li {
+    justify-content: space-between;
+}
+
+#about li:nth-child(odd) {
+    background-color: #e7e7e7;
+}
+
+#about p, #about a, #about h3 {
+    padding: 20px;
+}
+
+#site-info {
+    padding: 0px 0px;
+    border: 1px solid #282c34;
+    box-shadow: 5px 5px #282c34;
+    margin-bottom: 80px;
+}
+
+#site-info h2 {
+    background-color: #282c34;
+    color: white
+}
+
+#site-info > p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#references {
+    border: 1px solid #282c34;
+    box-shadow: 5px 5px #282c34;
+}
+
+#references h2 {
+    background-color: #f5dd42;
+    color: #282c34;
+    margin-bottom: 10px;
+}
+
+
 
 @media screen and (max-width: 375px) {
     nav {
@@ -420,20 +501,25 @@ footer h4 {
     }
 
     .breadcrumb {
-        visibility: hidden;
+        display: none;;
     }
 
     .place-card {
         margin: 0px 0px;
     }
-}
-
-@media screen and (max-width: 768px) {
 
     .space-device-edge {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    #about p, #about a {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
 
     header {
         background-color: #f5dd42;
@@ -467,8 +553,15 @@ footer h4 {
 
     #home-link-collection a {
         margin: 20px 0px;
-        flex-direction: column;
-        height: 100px;
+        max-width: 100%;
+    }
+
+    #home-link-collection a h3 {
+        padding: 5px;
+    }
+
+    #home-link-collection li {
+        margin: 0;
     }
 
     .description-card {
