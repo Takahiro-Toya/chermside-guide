@@ -16,8 +16,38 @@
 <body>
     <header>
         <div id="header-top" class="flex-row">
-            <h1>Chermside Guide</h1>
-            <a href="about.html">About website</a>
+            <a id="logo" href="index.html">
+                <h1>Chermside Guide</h1>
+            </a>
+            <a id="about-link" href="about.html">About website</a>
+            <div id="mobile-menu-clickable" class="mobile">
+                <input id="mobile-nav-input" type="checkbox" name="mobile-menu">
+                <label for="mobile-nav-input">
+                    <img id="mobile-nav-icon" src="images/nav-icon.png" alt="nav icon" />
+                </label>
+                <nav id="mobile-menu">
+                    <ul class="flex-column space-device-edge">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="eat.html">Eat</a>
+                        </li>
+                        <li>
+                            <a href="fun.html">Fun</a>
+                        </li>
+                        <li>
+                            <a href="">Shop</a>
+                        </li>
+                        <li>
+                            <a href="">Relax</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <nav>
             <ul>
@@ -148,7 +178,7 @@
             <li class="flex2">
                 <h4 class="has-child">About</h4>
                 <ul>
-                    <li><a href="">About this website</a></li>
+                    <li><a href="about.html">About this website</a></li>
                 </ul>
             </li>
         </ul>

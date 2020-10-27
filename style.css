@@ -116,6 +116,7 @@ ol {
 .margin-all:not(:nth-child(1)) {
     margin: 4%;
 }
+
 /* directrion switched flex box */
 .flex1 {
     display: flex;
@@ -140,13 +141,21 @@ ol {
     flex-direction: column;
 }
 
+.mobile {
+    display: none;
+}
 
 
 /* Header configuration*/
 
+header {
+    background-color: #f5dd42;
+}
+
 header h1 {
     font-family: 'Pacifico', cursive;
     padding: 20px;
+    color: #282c34
 }
 
 #header-top {
@@ -154,8 +163,25 @@ header h1 {
     align-items: center;
 }
 
+#header-top #about-link {
+    color: #282c34;
+    font-size: 1.1em;
+    background-color: white;
+    color: #282c34;
+    box-shadow: 3px 5px #282c34;
+    border: 1px solid #282c34;
+    padding: 3px;
+    border-radius: 5px;
+    margin-right: 20px;
+}  
+
+#header-top #about-link:hover {
+    color: white;
+    background-color: #282c34;
+    box-shadow: 3px 5px white;
+}
+
 header nav {
-    background-color: #f5dd42;
     align-items: center;
     font-size: 20px;
 }
@@ -168,7 +194,6 @@ header nav ul {
 header nav ul li {
     flex-grow: 1;
     text-align: center;
-    /* padding: 15px 0px; */
 }
 
 header nav ul li a {
@@ -177,7 +202,8 @@ header nav ul li a {
     width: 100%;
 }
 
-header nav ul li:hover {
+/* select only when mode is web  */
+header > nav ul li:hover {
     background-color: #282c34;
 }
 
@@ -212,17 +238,10 @@ header nav a {
 }
 
 
-
-#header-top a {
-    align-items: center;
-    padding: 20px;
-}
-
 /* Footer configuration */
 footer {
     flex-grow: 1;
     justify-content: flex-start;
-    margin-top: 0px;
 }
 
 footer * {
@@ -267,7 +286,6 @@ footer h4 {
 /* #Home -> Landing page */
 
 #home .description {
-    background: url("images/park.jpg") center / cover;
     padding: 5% 15% 30% 15%;
 }
 
@@ -285,7 +303,6 @@ footer h4 {
     margin: 80px 0px;
     display: flex;
     flex-wrap: nowrap;
-    /* flex-direction: row; */
 }
 
 #home-link-collection li {
@@ -345,14 +362,17 @@ footer h4 {
 }
 
 /* Category page */
-.category, .place {
-    margin-bottom: 60px;
-}
 
 .category article h2 {
     padding: 30px 0px;
     text-align: left;
+    font-size: 2.5em;
 }
+
+.category article h3 {
+    font-size: 1.6em;
+}
+
 /* collection of places */
 .place-cards {
     justify-content: space-around;
@@ -436,7 +456,7 @@ footer h4 {
     max-width: 100%;
 }
 
-#place-contact-info {
+#place-contact-info, #place-contact-info h3 {
     background: #d4d4d4;
 }
 
@@ -493,42 +513,15 @@ footer h4 {
 }
 
 
+/* for width smaller thatn 768px */
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 375px) {
-    nav {
-        display: none;
-    }
     .flex2 {
         flex-direction: row;
     }
 
     .flex1 {
         flex-direction: column;
-    }
-
-    .breadcrumb {
-        display: none;;
-    }
-
-    .place-card {
-        margin: 0px 0px;
-    }
-
-    .space-device-edge {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    #about p, #about a {
-        padding: 5px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-
-    header {
-        background-color: #f5dd42;
     }
 
     header h1 {
@@ -542,11 +535,6 @@ footer h4 {
     #footer-link-collection .flex2{
         flex-direction: column;
         margin-bottom: 20px;
-    }
-
-    #header title {
-        justify-content: center;
-        align-items: center;
     }
 
     #home-link-collection {
@@ -570,6 +558,10 @@ footer h4 {
         margin: 0;
     }
 
+    #home .description {
+        padding: 5% 10% 30% 10%;
+    }
+
     .description-card {
         margin: 0;
     }
@@ -579,11 +571,169 @@ footer h4 {
         margin: 10px 10px;
     }
 
+    /* Need important to avoid row-reverse  */
     .place-detail-collection .flex1 {
         flex-direction: column !important;
     }
-
-
 }
 
-@media screen and (max-width: 1440px) {}
+/* screen is bigger than 376px */
+@media screen and (min-width: 376px) {
+    #home .description {
+        background: url("images/park.jpg") center / cover;
+    }
+}
+
+/* for width smaller than 375px */
+@media screen and (max-width: 375px) {
+
+    #header-top {
+        height: 90px;
+    }
+
+    /* activate mobile nav */
+    #mobile-menu-clickable {
+        display: flex;
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        background-color: #f5dd42;
+        border-radius: 100%;
+        z-index: 11;
+    }
+
+    #mobile-menu-clickable img {
+        max-width: 40%;
+    }
+
+    /* hidden web nav */
+    nav:not(.mobile) {
+        display: none;
+    }
+
+    #mobile-menu-clickable label {
+        z-index: 10;
+        width: 70px;
+        text-align: center;
+        align-self: center;
+    }
+
+    /* expansion menu is hidden by default */
+    #mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 9; /* needs to be below the nav icon*/
+        background-color: rgba(245, 221, 66, 0.96)
+    }
+
+    /* Just give a space for nav icon */
+    #mobile-menu ul::before {
+        content: "";
+        margin-top: 90px;
+    }
+
+    #mobile-menu li {
+        display: block;
+        height: 90px;
+        width: 100%;
+        align-items: center;
+    }
+
+    #mobile-menu a {
+        color: #282c34;
+        border-bottom: 1px solid #616161;
+        width: 60%;
+        font-size: 1.5em;
+    }
+
+    #mobile-menu a:hover {
+        color: red;
+    }
+
+    /* we don't want actual checkbox */
+    #mobile-nav-input {
+        display: none;
+    }
+
+    #mobile-nav-icon-cancel {
+        display: none;
+    }
+
+    /* nav icon clicked then expand menu */
+    #mobile-nav-input:checked ~ #mobile-menu {
+        display: block;
+    }
+
+    #mobile-nav-input:checked ~ #movile-nav-input{
+        display: none;
+    }
+
+    /* #mobile-menu-clickable input:checked #mobile-nav-icon-cancel {
+        display: block;
+    } */
+
+    .space-device-edge {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .breadcrumb {
+        display: none;;
+    }
+
+    #header-top #about-link {
+        display: none;
+    }
+ 
+    #header-top {
+        justify-content: space-between;
+    }
+
+    #home .description {
+        padding: 5% 10% 10% 10%;
+    }
+
+    #home img.mobile {
+        display: block;
+        position: sticky;
+        top: 0;
+        margin: 0px auto;
+        width: 100%;
+        z-index: -1;
+    }
+
+    #home-link-collection {
+        margin-top: 40px;
+    }
+
+    .place-card {
+        margin: 0px 0px;
+    }
+
+    .place article h3 {
+        position: sticky;
+        top: 0px;
+    }
+
+    .place-detail-collection li:nth-child(odd) h3 {
+        background-color: white;
+    }
+
+    .place-detail-collection li:nth-child(even) h3 {
+        background-color: #f5dd42;
+    }
+
+
+    #about p, #about a {
+        padding: 5px;
+    }
+}
+
+
