@@ -37,6 +37,12 @@ a {
     color: #616161
 }
 
+/* When a attribute is the URL itself */
+a.direct-link {
+    text-decoration: underline;
+    word-wrap: break-word;
+}
+
 p {
     text-align: left;
 }
@@ -155,7 +161,7 @@ header {
 header h1 {
     font-family: 'Pacifico', cursive;
     padding: 20px;
-    color: #282c34
+    color: #282c34;
 }
 
 #header-top {
@@ -461,8 +467,11 @@ footer h4 {
     background: #d4d4d4;
 }
 
-/* About page */
+#place-contact-info p, #place-contact-info a {
+    text-align: center;
+}
 
+/* About page */
 #about {
     margin: 30px 0px;
 }
@@ -483,6 +492,7 @@ footer h4 {
 #about p, #about a, #about h3 {
     padding: 20px;
 }
+
 
 #site-info {
     padding: 0px 0px;
@@ -511,6 +521,10 @@ footer h4 {
     background-color: #f5dd42;
     color: #282c34;
     margin-bottom: 10px;
+}
+
+#references ul li {
+    padding: 3px;
 }
 
 
@@ -576,6 +590,10 @@ footer h4 {
     .place-detail-collection .flex1 {
         flex-direction: column !important;
     }
+
+    #about p, #about a {
+        text-align: center;
+    }
 }
 
 /* screen is bigger than 376px */
@@ -590,6 +608,7 @@ footer h4 {
 
     #header-top {
         height: 90px;
+        justify-content: center;
     }
 
     /* activate mobile nav */
@@ -680,13 +699,6 @@ footer h4 {
     #mobile-nav-input:checked + #mobile-nav-icon-container #mobile-nav-cancel-icon{
         display: block;
     }
-
-
-
-    /* #mobile-nav-icon {
-        display: none;
-    } */
-
 
     .space-device-edge {
         padding-left: 20px;
