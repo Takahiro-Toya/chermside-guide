@@ -744,11 +744,6 @@ footer h4 {
         margin: 0px 0px;
     }
 
-    .place article h3 {
-        position: sticky;
-        top: 0px;
-    }
-
     .place-detail-collection li:nth-child(odd) h3 {
         background-color: white;
     }
