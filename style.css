@@ -110,7 +110,6 @@ ol {
 }
 
 .breadcrumb li a {
-    text-underline-position: below;
     text-decoration: underline;
     text-decoration-color: #282c34;
 }
