@@ -227,10 +227,9 @@ header > nav ul li:hover {
     font-size: 15px;
     border: 1px solid black;
     box-sizing: border-box;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     max-width: 100%;
     align-self: center;
+    box-shadow: 0 0 40px #282c34;
 }
 
 header nav ul li:hover .tooltip {
@@ -482,7 +481,7 @@ footer h4 {
 }
 
 /* About page */
-#about {
+#about article {
     margin: 30px 0px;
 }
 
@@ -491,15 +490,15 @@ footer h4 {
     margin: 0px;
 }
 
-#about li {
+#about article li {
     justify-content: space-between;
 }
 
-#about li:nth-child(odd) {
+#about article li:nth-child(odd) {
     background-color: #e7e7e7;
 }
 
-#about p, #about a, #about h3 {
+#about article p, #about article a, #about article h3 {
     padding: 20px;
 }
 
@@ -601,7 +600,7 @@ footer h4 {
         flex-direction: column !important;
     }
 
-    #about p, #about a {
+    #about article p, #about article a {
         text-align: center;
     }
 }
@@ -757,7 +756,7 @@ footer h4 {
     }
 
 
-    #about p, #about a {
+    #about article p, #about article a {
         padding: 5px;
     }
 }
