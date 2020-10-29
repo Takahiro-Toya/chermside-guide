@@ -101,9 +101,13 @@ ol {
     color: gray;
 }
 
+.breadcrumb [aria-current] a {
+    text-decoration: none;
+    pointer-events: none;
+}
+
 .breadcrumb li:not([aria-current])::after {
     border-bottom: none;
-    text-decoration: none;
     content: ">";
     margin: .25em;
     text-align: center;
