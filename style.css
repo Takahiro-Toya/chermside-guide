@@ -48,7 +48,7 @@ p {
 }
 
 /* default link hover action */
-a:hover {
+a:hover, a:focus-within {
     color: red;
 }
 
@@ -192,7 +192,7 @@ header nav a {
     margin-right: 20px;
 }  
 
-#header-top #about-link:hover {
+#header-top #about-link:hover, #header-top #about-link:focus-within {
     color: white;
     background-color: #282c34;
     box-shadow: 3px 5px white;
@@ -220,7 +220,7 @@ header nav ul li a {
 }
 
 /* select only when mode is web  */
-header > nav ul li:hover {
+header > nav ul li:hover, header > nav ul li:focus-within {
     background-color: #282c34;
 }
 
@@ -240,11 +240,11 @@ header > nav ul li:hover {
     box-shadow: 0 0 40px #282c34;
 }
 
-header nav ul li:hover .tooltip {
+header nav ul li:hover .tooltip, header nav ul li:focus-within .tooltip {
     visibility: visible;
 }
 
-header nav ul li:hover a {
+header nav ul li:hover a, header nav ul li:focus-within a {
     color: #f5dd42
 }
 
@@ -266,7 +266,7 @@ footer * {
     color: #616161;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus-within {
     color: red;
 }
 
@@ -367,14 +367,14 @@ footer h4 {
     border: 3px solid #f5dd42;
 }
 
-#home-link-collection a:hover {
+#home-link-collection a:hover, #home-link-collection a:focus-within {
     background-color: #282c34;
     color: white;
     box-shadow: 10px 10px #f5dd42;
     transform: rotate(5deg);
 }
 
-#home-link-collection a:hover h3 {
+#home-link-collection a:hover h3, #home-link-collection a:focus-within h3 {
     background: #282c34;
     color: white;
     border-color: #282c34;
@@ -413,7 +413,7 @@ footer h4 {
     align-items: stretch;
 }
 
-.place-card:hover {
+.place-card:hover, .place-card:focus-within {
     
     transform: scale(1.05);
 }
