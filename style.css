@@ -105,16 +105,13 @@ figcaption {
     color: gray;
 }
 
-.breadcrumb [aria-current] a {
+.breadcrumb a[aria-current] {
     text-decoration: none;
     pointer-events: none;
 }
 
-.breadcrumb li:not([aria-current])::after {
-    border-bottom: none;
-    content: ">";
-    margin: .25em;
-    text-align: center;
+.breadcrumb span {
+    margin: 0 .25em;
 }
 
 .breadcrumb li a {
